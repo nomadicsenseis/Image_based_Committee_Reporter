@@ -1,0 +1,14 @@
+# Airline Performance Report - 15-04-2025
+
+## Weekly Report
+
+- **Operations**: La puntualidad en salidas ha disminuido 3 puntos (-3.3%) respecto a la semana anterior, situándose en 87%. Las tendencias de puntualidad muestran fluctuaciones con picos de 97% para IB LH inbound y caídas notables hasta 70% para IB LH outbound el 3 de abril. Los mapas de operaciones muestran valores máximos de 100% en Oriente Medio y Extremo Oriente para inbound, y 100% en Extremo Oriente para outbound, mientras los valores mínimos se registran en África Centro (50%) y Oriente Medio (0%) respectivamente.
+
+- **Customer**: El NPS ha caído 6.2 puntos (-17.9%) respecto a la semana anterior, situándose en 28.5 puntos, 3.9 por debajo del target. Las tendencias muestran fluctuaciones significativas, con IB LH inbound cayendo drásticamente a 1 el 2 de abril y IB SMH outbound alcanzando un pico de 49 el 2 de abril seguido de una caída a 20 el día siguiente. Los mapas revelan valores máximos de NPS inbound en África Centro (71) y mínimos en América Sur (8), mientras que outbound los máximos se registran en África Norte y Extremo Oriente (50) y mínimos en Oriente Medio (18).
+
+- **Disruptions**: Las cancelaciones han aumentado significativamente (+500%) pasando de 2 a 12 vuelos, mientras que las llegadas demoradas más de 15 minutos crecieron un 56.7%. Las tendencias muestran picos aislados de cancelaciones, destacando el 31 de marzo para IB SMH inbound y el 2 de abril para IB SMH outbound. Los mapas revelan que Europa CEE concentra el máximo de cancelaciones tanto inbound (5) como outbound (3), mientras varias regiones no registran cancelaciones.
+
+- **Commercial**: Los intakes muestran un incremento significativo de 8.7M (+7.1%) respecto a la semana anterior y superan el target en 18.9M, mientras que los pasajeros aumentaron un 7.4%. Las tendencias muestran evolución positiva en intakes para LH con un pico el 24/03 y caída el 30/03, mientras MH solo presenta datos de los últimos días. Los mapas revelan que la región PA lidera con 62M en intakes, mientras DZ registra el valor mínimo con 2.2M.
+
+- **Interpretación General**: El deterioro operativo, evidenciado por la caída en puntualidad y el aumento de cancelaciones y demoras, parece haber impactado la satisfacción del cliente, reflejada en la significativa caída del NPS. Específicamente, la baja puntualidad del 70% en IB LH outbound el 3 de abril coincide con la caída del NPS a 8 puntos en IB LH inbound el mismo día. La concentración de cancelaciones en Europa CEE sugiere problemas operativos localizados que requieren atención inmediata. Sorprendentemente, a pesar de estos desafíos operativos, los indicadores comerciales muestran un comportamiento positivo con incrementos significativos en intakes y pasajeros, lo que podría indicar una fuerte demanda subyacente que está resistiendo los problemas de servicio.
+

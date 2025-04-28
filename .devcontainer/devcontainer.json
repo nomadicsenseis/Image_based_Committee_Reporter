@@ -1,0 +1,30 @@
+{
+    "name": "Redshift-Bedrock Analyzer",
+    "dockerFile": "../Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "black"
+            }
+        }
+    },
+    "forwardPorts": [],
+    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+    "remoteUser": "root",
+    "runArgs": ["--env-file", ".devcontainer/.env"],
+    "containerEnv": {
+        "PYTHONPATH": "/workspaces/NPS-copilot:${containerEnv:PYTHONPATH}"
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder}/dashboard_analyzer/img/context,target=/workspaces/NPS-copilot/dashboard_analyzer/img/context,type=bind,consistency=cached",
+        "source=${localWorkspaceFolder}/dashboard_analyzer/img/inference,target=/workspaces/NPS-copilot/dashboard_analyzer/img/inference,type=bind,consistency=cached"
+    ]
+}

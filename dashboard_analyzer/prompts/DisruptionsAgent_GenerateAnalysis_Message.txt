@@ -1,0 +1,62 @@
+Analiza los siguientes datos del dashboard de Disruptions y proporciona un análisis estructurado.
+
+**ANÁLISIS DETALLADOS DE ENTRADA:**
+### Datos de KPIs
+{raw_data_kpis}
+
+### Datos de Tendencias
+{raw_data_trends}
+
+### Datos de Mapas
+{raw_data_maps}
+
+### Umbrales definidos para evaluar los datos:
+{thresholds}
+
+**TAREA:**
+1. Evalúa todos los KPIs relevantes contra umbrales.
+2. **Tendencias:** Describe patrones clave y **OBLIGATORIAMENTE incluye los valores `cancelaciones_maximas` y `cancelaciones_minimas`** para cada segmento (in/out) si los datos de entrada (`trend_data`) los contienen.
+3. **Mapas:** Describe patrones clave y **OBLIGATORIAMENTE incluye `region_max_cancelaciones`, `valor_maximo`, `region_min_cancelaciones`, `valor_minimo`** para cada segmento (in/out) si los datos de entrada (`map_data`) los contienen.
+4. **Overall:** Resume hallazgos clave, incluyendo los **máximos y mínimos de cancelaciones MÁS SIGNIFICATIVOS** de tendencias y mapas.
+5. Genera un análisis estructurado siguiendo **ESTRICTAMENTE** el formato JSON de salida especificado.
+
+**Formato JSON de Salida Requerido (¡SEGUIR ESTRICTAMENTE! INCLUIR *TODOS* LOS CAMPOS):**
+```json
+{{
+  "kpi_analysis": {{
+    "cancelled": {{ "value": number, "analysis": "string" }},
+    "cancelled_vs_cancelled_prev_week": {{ "cancelled_value": number, "prev_week_cancelled_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "cancelled_operative": {{ "value": number, "analysis": "string" }},
+    "cancelled_commercial": {{ "value": number, "analysis": "string" }},
+    "delayed_arr_c15": {{ "value": number, "analysis": "string" }},
+    "delayed_arr_c15_vs_delayed_arr_c15_prev_week": {{ "delayed_arr_c15_value": number, "prev_week_delayed_arr_c15_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "misconnections_percentage": {{ "value": number, "analysis": "string" }},
+    "misconnections_percentage_vs_misconnections_percentage_prev_week": {{ "misconnections_percentage_value": number, "prev_week_misconnections_percentage_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "misshandling_permille": {{ "value": number, "analysis": "string" }},
+    "misshandling_permille_vs_misshandling_permille_prev_week": {{ "misshandling_permille_value": number, "prev_week_misshandling_permille_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "dnb": {{ "value": number, "analysis": "string" }},
+    "dng": {{ "value": number, "analysis": "string" }}
+  }},
+  "trend_analysis": {{
+    "inbound": {{
+      "cancelled_evolution": {{ "overall_analysis": "string", "cancelaciones_maximas": number | null, "cancelaciones_minimas": number | null }}
+    }},
+    "outbound": {{
+      "cancelled_evolution": {{ "overall_analysis": "string", "cancelaciones_maximas": number | null, "cancelaciones_minimas": number | null }}
+    }}
+  }},
+  "map_analysis": {{
+    "inbound": {{ "analysis": "string", "region_max_cancelaciones": string | null, "valor_maximo": number | null, "region_min_cancelaciones": string | null, "valor_minimo": number | null }},
+    "outbound": {{ "analysis": "string", "region_max_cancelaciones": string | null, "valor_maximo": number | null, "region_min_cancelaciones": string | null, "valor_minimo": number | null }}
+  }},
+  "overall_analysis": "string (incluyendo resumen de max/min cancelaciones)"
+}}
+```
+
+**Reglas CRÍTICAS:**
+- **DEBES INCLUIR TODOS LOS CAMPOS** del formato JSON, especialmente los de max/min cancelaciones y regiones. Usa `null` si falta el dato.
+- Menciona KPIs solo si son relevantes.
+- Usa diferencia absoluta, no porcentual, para KPIs comparativos.
+- Enfócate solo en IB para cancelaciones.
+- No inventes datos.
+- **RESPONDE ÚNICAMENTE CON EL JSON.** 

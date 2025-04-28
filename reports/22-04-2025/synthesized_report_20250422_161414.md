@@ -1,0 +1,14 @@
+# Airline Performance Report - 22-04-2025
+
+## Weekly Report
+
+- **Operations**: La puntualidad en salidas ha aumentado un 2.22% respecto a la semana anterior, aunque se registra una disminución del 1.77% en el número de pasajeros. En tendencias, IB SMH muestra mayor estabilidad tanto inbound como outbound (86-98%) mientras IB LH presenta mayor fluctuación (71-97% inbound, 77-97% outbound). Geográficamente, se observa una tendencia decreciente en la puntualidad inbound a medida que aumenta la distancia desde España, mientras outbound destacan ÁFRICA CENTRO, ORIENTE MEDIO y EXTREMO ORIENTE con 100%.
+
+- **Customer**: El NPS ha aumentado 2.6 puntos respecto a la semana anterior, mientras que el ratio de pasajeros IB Plus ha disminuido un 14.7% y el ratio business/leisure ha caído drásticamente un 63%, posiblemente debido a un periodo vacacional. En tendencias, IB LH muestra valores decrecientes hasta volverse negativos desde el 16 de abril inbound, mientras IB SMH mantiene valores altos y estables. Geográficamente, ESPAÑA presenta el máximo NPS inbound (52) mientras ORIENTE MEDIO muestra el mínimo (-100) inbound pero el máximo outbound (100, junto con ÁFRICA CENTRO).
+
+- **Disruptions**: Las cancelaciones han disminuido significativamente (-81.82%) respecto a la semana anterior, con solo 2 vuelos cancelados por motivos operativos. En tendencias, se observaron picos puntuales de 2 cancelaciones los días 10-11 de abril para IB LH inbound y el 9 de abril para IB SMH inbound. En el mapa, AMÉRICA SUR y ESPAÑA registraron el máximo de cancelaciones inbound (1 cada una), mientras todas las regiones presentaron 0 cancelaciones outbound.
+
+- **Commercial**: Los intakes han disminuido significativamente (-10.2) respecto a la semana anterior, con una caída preocupante en el número de pasajeros (-24,700) que requiere monitoreo cercano. La tendencia general es decreciente tanto para IB LH como SMH, con picos puntuales el 7-9 de abril seguidos de caídas hacia el 16 de abril. En el mapa inbound, PA muestra el valor máximo de intakes (52.3M) mientras DZ presenta el mínimo (2.1M).
+
+- **Interpretación General**: La semana muestra resultados mixtos con mejoras operativas significativas (aumento de puntualidad y reducción drástica de cancelaciones) contrastando con indicadores comerciales y de customer preocupantes. La caída del 63% en el ratio business/leisure sugiere un periodo vacacional que podría explicar parcialmente la disminución en intakes y pasajeros. Destaca la situación de ORIENTE MEDIO con el peor NPS inbound (-100) pero el mejor outbound (100), sugiriendo una asimetría importante en la experiencia del cliente según la dirección del vuelo. La caída en NPS para vuelos IB LH inbound a partir del 16 de abril no parece relacionarse directamente con las operaciones o disrupciones de los días previos relevantes, lo que sugiere otros factores influyendo en la satisfacción del cliente.
+

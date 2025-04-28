@@ -1,0 +1,58 @@
+Analiza los siguientes datos del dashboard de Operations y proporciona un análisis estructurado.
+
+**ANÁLISIS DETALLADOS DE ENTRADA:**
+### Datos de KPIs
+{raw_data_kpis}
+
+### Datos de Tendencias
+{raw_data_trends}
+
+### Datos de Mapas
+{raw_data_maps}
+
+### Umbrales definidos para evaluar los datos:
+{thresholds}
+
+**TAREA:**
+1. Evalúa todos los KPIs relevantes contra umbrales.
+2. **Tendencias:** Describe patrones clave y **OBLIGATORIAMENTE incluye los valores `valor_maximo` y `valor_minimo`** para cada segmento (in/out) si los datos de entrada (`trend_data`) los contienen.
+3. **Mapas:** Describe patrones clave y **OBLIGATORIAMENTE incluye `region_maxima`, `valor_maximo`, `region_minima`, `valor_minimo`** para cada segmento (in/out) si los datos de entrada (`map_data`) los contienen.
+4. **Overall:** Resume hallazgos clave, incluyendo los **máximos y mínimos MÁS SIGNIFICATIVOS** de tendencias y mapas.
+5. Genera un análisis estructurado siguiendo **ESTRICTAMENTE** el formato JSON de salida especificado.
+
+**Formato JSON de Salida Requerido (¡SEGUIR ESTRICTAMENTE! INCLUIR *TODOS* LOS CAMPOS):**
+```json
+{{
+  "kpi_analysis": {{
+    "departures": {{ "value": number, "analysis": "string" }},
+    "departures_vs_departures_prev_week": {{ "departures_value": number, "prev_week_departures_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "punctuality_c15": {{ "value": number, "analysis": "string" }},
+    "punctuality_c15_vs_punctuality_c15_prev_week": {{ "punctuality_c15_value": number, "prev_week_punctuality_c15_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "flowed_load_factor": {{ "value": number, "analysis": "string" }},
+    "flowed_load_factor_vs_flowed_load_factor_prev_week": {{ "flowed_load_factor_value": number, "prev_week_flowed_load_factor_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "passengers": {{ "value": number, "analysis": "string" }},
+    "passengers_vs_passengers_prev_week": {{ "passengers_value": number, "prev_week_passengers_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }}
+  }},
+  "trend_analysis": {{
+    "inbound": {{
+      "PunDepC15_evolution": {{ "overall_analysis": "string", "valor_maximo": number | null, "valor_minimo": number | null }}
+    }},
+    "outbound": {{
+      "PunDepC15_evolution": {{ "overall_analysis": "string", "valor_maximo": number | null, "valor_minimo": number | null }}
+    }}
+  }},
+  "map_analysis": {{
+    "inbound": {{ "analysis": "string", "region_maxima": string | null, "valor_maximo": number | null, "region_minima": string | null, "valor_minimo": number | null }},
+    "outbound": {{ "analysis": "string", "region_maxima": string | null, "valor_maximo": number | null, "region_minima": string | null, "valor_minimo": number | null }}
+  }},
+  "overall_analysis": "string (incluyendo resumen de max/min)"
+}}
+```
+
+**Reglas CRÍTICAS:**
+- **DEBES INCLUIR TODOS LOS CAMPOS** del formato JSON especificado, especialmente `valor_maximo`, `valor_minimo`, `region_maxima`, `region_minima`. Si los datos de entrada no los proporcionan para un segmento, usa el valor `null`, pero la clave DEBE estar presente.
+- Menciona KPIs solo si son relevantes.
+- Usa diferencia absoluta, no porcentual, para KPIs comparativos.
+- Enfócate solo en IB.
+- No inventes datos.
+- **RESPONDE ÚNICAMENTE CON EL JSON.** 

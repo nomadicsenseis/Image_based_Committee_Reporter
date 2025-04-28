@@ -1,0 +1,9 @@
+Extrae todos los KPIs y sus valores de la imagen proporcionada.
+
+- Identifica el nombre del dashboard (ej. operations, customer).
+- Para cada KPI, indica su valor numérico.
+- Si hay comparación con Previous Week (PW) o Target, incluye esos valores también.
+- Formatea la salida como un JSON con una clave "kpis" que contenga un diccionario de {nombre_kpi: valor, nombre_kpi_pw: valor_pw, ...}
+- Devuelve SOLO el JSON puro.
+
+{Placeholder para la IMAGEN DE KPIS} 

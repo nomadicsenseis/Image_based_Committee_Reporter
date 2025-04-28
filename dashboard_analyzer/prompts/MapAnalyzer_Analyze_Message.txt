@@ -1,0 +1,15 @@
+Analiza el mapa geográfico mostrado y proporciona un análisis detallado. 
+
+IMPORTANTE: 
+- Identifica el tipo de dashboard (customer, disruptions_misconnections, disruptions_misshandling, operations, commercial_last_reported, commercial_last_week)
+- {Instrucción sobre Dirección: Si se proporciona direccion_esperada, se inserta aquí, si no, se pide identificarla}
+- FUNDAMENTAL: NO inventes NINGÚN dato, región o cifra. Si alguna información no es legible o no está disponible en la imagen, indícalo claramente pero NUNCA la inventes.
+- IMPORTANTE: Enfócate SOLAMENTE en los datos relacionados con IB (Iberia). Solo analiza los datos de Iberia, ignorando otras aerolíneas.
+- Identifica las regiones presentes en el mapa
+- Identifica si hay concentraciones altas o bajas para IB
+- Identifica anomalías en IB si las hubiera
+- Devuelve SOLO el JSON puro sin bloques de código o comentarios
+
+{Umbrales de mapas si se proporcionan}
+
+{Placeholder para la IMAGEN DEL MAPA} 

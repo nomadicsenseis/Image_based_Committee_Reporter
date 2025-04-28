@@ -1,0 +1,37 @@
+Tu tarea es generar un párrafo de interpretación general (3-5 frases) conectando los puntos clave de los resúmenes por área y los análisis detallados proporcionados.
+
+**RESÚMENES POR ÁREA GENERADOS (Paso 1):**
+```json
+{area_summaries_text}
+```
+
+**ANÁLISIS DETALLADOS ORIGINALES (Contexto Adicional):**
+{analyses_text}
+
+**INSTRUCCIONES DETALLADAS PARA GENERAR `overall_interpretation` (Párrafo de Análisis Global):**
+
+**OBJETIVO PRINCIPAL:** Crear un párrafo conciso (3-5 frases) que ofrezca una **visión global y estratégica** del rendimiento semanal, conectando los puntos clave de los 4 resúmenes de área (Commercial, Customer, Operations, Disruptions) y los datos detallados originales. Busca la **narrativa** que une los diferentes aspectos.
+
+**CONTENIDO Y ANÁLISIS REQUERIDO:**
+
+1.  **Conexiones entre Áreas:** Identifica y describe las relaciones más significativas o patrones que emergen al considerar las áreas en conjunto. ¿Cómo interactúan los resultados comerciales, operativos, de cliente y de disrupciones?
+2.  **Impacto NPS (Verificación Decalaje 4+ días OBLIGATORIA):**
+    *   *Recordatorio:* El impacto en NPS de eventos Ops/Disruptions se refleja **4 o más días después** (encuesta día 4, respuesta puede ser posterior).
+    *   *Acción:* **Verifica MENTALMENTE** si las conexiones que propones entre Ops/Disruptions y NPS respetan este decalaje de 4 o más días. "Piensa si tu razonamiento respeta el decalaje".
+    *   *Reporte (SI CUMPLE DECALAJE):* Si encuentras una conexión temporalmente plausible (ej. mala Ops día X -> caída NPS día X+4 o posterior), **describe la conexión aportando DATOS específicos** (días, valores, regiones/cabinas si aplica para ambos eventos).
+    *   *Reporte (DIVERGENCIA):* Si la correlación esperada falla notablemente (ej. mala Ops/Disruptions sin caída NPS posterior; o NPS bajo sin causa clara en Ops/Disruptions 4+ días antes), **comenta esta divergencia** como una situación inesperada o sorprendente (ver ejemplos abajo). Considera que no hay correlación clara esperada con Commercial.
+3.  **Consistencia Inbound/Outbound:** Al comparar datos entre áreas (especialmente tendencias/mapas de Operations y Customer), **ASEGÚRATE** de mantener la perspectiva (`inbound` con `inbound`, `outbound` con `outbound`). Verifica también la consistencia temporal considerando el decalaje NPS.
+4.  **Ejemplos para Comentarios de Divergencia:** 'Sorprendentemente, a pesar del deterioro en [Operativa/Disrupciones], el NPS se mantuvo estable.' o 'La caída del NPS no parece tener una correspondencia directa con eventos operativos o de disrupción significativos en los 4+ días previos.'
+
+**REGLAS IMPORTANTES Y QUÉ EVITAR:**
+
+*   **Lenguaje:** Habla de "target" (no de objetivo), de "load_factor" (no de factor de carga), de "inbound" y "outbound" (no de entrada y salida), "puntualidad en entradas/salidas" (no de puntualidad C15) y de "misshandling" y "missconnections" (sin traducir).
+*   **NO Mencionar Decalaje Explícitamente:** La consideración del decalaje de 4+ días es interna, **NUNCA** lo menciones en el texto final.
+*   **NO Mencionar Umbrales Explícitamente:** No cites los valores numéricos de los umbrales de relevancia, ni menciones que existen. Solo tenlos en cuenta en añadir un comentario o no añadirlo.
+*   **NO Explicar Correlación Básica Ops/NPS:** Evita decir simplemente "la mala operativa afecta al NPS". Solo menciona la relación si aportas datos específicos que la sustenten (ver punto 2) o si comentas una divergencia (ver punto 4).
+*   **NO Ser Redundante:** No repitas información ya dada en los resúmenes por área.
+*   **NO Añadir Obviedades:** Evita comentarios como "hay que monitorizar este KPI".
+
+**FORMATO DE SALIDA:**
+
+*   Devuelve **SOLAMENTE** el texto del párrafo de interpretación general (3-5 frases). Sin claves JSON, sin formato Markdown extra. 

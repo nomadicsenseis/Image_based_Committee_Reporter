@@ -1,0 +1,14 @@
+# Airline Performance Report - 15-04-2025
+
+## Weekly Report
+
+- **Operations**: La puntualidad en salidas ha disminuido 3 puntos respecto a la semana anterior, situándose en 87%, lo que indica un deterioro operativo. Las tendencias muestran una caída pronunciada en la puntualidad de entradas para IB LH el 3 de abril (hasta 65%) y para IB SMH el 4 de abril (hasta 82%). Los mapas revelan que las regiones de Oriente Medio y Extremo Oriente presentan los valores más altos de puntualidad en entradas, mientras que España muestra un valor relativamente bajo (91%) en puntualidad de salidas comparado con otras regiones europeas.
+
+- **Customer**: El NPS ha disminuido significativamente respecto a la semana anterior (-6.2 puntos), aunque se mantiene dentro del rango objetivo de 25-40. Las tendencias muestran fluctuaciones notables en ambas direcciones, con una caída drástica para IB LH inbound del 1 al 2 de abril (de 34 a 1) y un pico para IB SMH outbound el 2 de abril (49). Los mapas revelan valores NPS altos en regiones de África y Europa, mientras que América presenta valores más bajos, con una anomalía significativa en Oriente Medio (-6) para inbound.
+
+- **Disruptions**: Las cancelaciones aumentaron significativamente (500%) respecto a la semana anterior, pasando de 2 a 12, y las llegadas demoradas crecieron un 56.7% (de 224 a 351). Las tendencias muestran picos de cancelaciones para I2 SMH los días 28 de marzo, 1 y 3 de abril, mientras que para IB SMH el pico más importante fue el 31 de marzo. Los mapas revelan que la región de Europa CEE concentra la mayor cantidad de cancelaciones tanto en entradas como en salidas, siendo la única región con un valor distinto de cero en salidas.
+
+- **Commercial**: Los intakes aumentaron un 12.8% respecto a la semana anterior y superan el target en 18.9 puntos, mientras que los pasajeros crecieron un 10.1%, mostrando un rendimiento comercial positivo. Las tendencias muestran fluctuaciones en los intakes con picos significativos el 24 de marzo para IB LH y el 1 de abril para IB SMH. La distribución geográfica muestra valores destacados en Panamá (61.9M) y Hungría (26.9M), con España en tercer lugar (18.6M).
+
+- **Interpretación General**: El deterioro operativo y el aumento de disrupciones se reflejan claramente en los indicadores de servicio, con una caída significativa en la puntualidad y un incremento notable en cancelaciones y llegadas demoradas. Resulta especialmente relevante la caída drástica del NPS para IB LH inbound del 1 al 2 de abril (de 34 a 1), que coincide con el aumento de cancelaciones observado el 28 de marzo. Sorprendentemente, a pesar del deterioro generalizado en operaciones y el aumento de disrupciones, el rendimiento comercial se mantiene sólido con crecimientos significativos en intakes y pasajeros, lo que sugiere que los problemas operativos aún no han impactado la demanda.
+

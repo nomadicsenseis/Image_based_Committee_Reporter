@@ -1,0 +1,53 @@
+Analiza los siguientes datos del dashboard Commercial para el período '{period}' y proporciona un análisis estructurado.
+
+**ANÁLISIS DETALLADOS DE ENTRADA:**
+### Datos de KPIs
+{raw_data_kpis}
+
+### Datos de Tendencias
+{raw_data_trends}
+
+### Datos de Mapas
+{raw_data_maps}
+
+### Umbrales definidos para evaluar los datos:
+{thresholds}
+
+### Valores exactos de KPIs para este período
+{kpi_text}
+
+### Archivos Faltantes
+{missing_files_json}
+IMPORTANTE: Ten en cuenta que faltan algunos archivos. En tu análisis, menciona explícitamente qué datos faltan.
+
+**TAREA:**
+1. Evalúa todos los KPIs relevantes del período '{period}' contra umbrales.
+2. **Tendencias:** Describe patrones clave y **OBLIGATORIAMENTE incluye `intake_maximo` y `intake_minimo`** para cada gráfico si los datos de entrada (`trend_data`) los contienen.
+3. **Mapas:** Describe patrones clave y **OBLIGATORIAMENTE incluye `region_max_intakes`, `intake_maximo`, `region_min_intakes`, `intake_minimo`** si los datos de entrada (`map_data`) los contienen.
+4. **Overall:** Resume hallazgos clave del PERÍODO, incluyendo los **máximos y mínimos de intakes MÁS SIGNIFICATIVOS** de tendencias y mapas.
+5. Genera un análisis estructurado siguiendo **ESTRICTAMENTE** el formato JSON de salida especificado para ESTE PERÍODO '{period}'.
+
+**Formato JSON de Salida Requerido (¡SEGUIR ESTRICTAMENTE! INCLUIR *TODOS* LOS CAMPOS):**
+```json
+{{{{
+  "kpi_analysis": {{{{ "{period}": {{ ... (estructura kpi completa) ... }} }}}},
+  "trend_analysis": {{{{
+    "{period}": {{{{
+      "evolution_intakes_weekly_by_flight_month": {{ "overall_analysis": "string", "intake_maximo": number | null, "intake_minimo": number | null }},
+      "evolution_intakes_by_salesdateregion": {{ "overall_analysis": "string", "intake_maximo": number | null, "intake_minimo": number | null }},
+      "evolution_intakes_by_salesdatehaul": {{ "overall_analysis": "string", "intake_maximo": number | null, "intake_minimo": number | null }}
+    }}}}
+  }}}},
+  "map_analysis": {{{{
+    "{period}": {{ "analysis": "string", "region_max_intakes": string | null, "intake_maximo": number | null, "region_min_intakes": string | null, "intake_minimo": number | null }}
+  }}}},
+  "period_overall_analysis": "string (resumen del período '{period}', incluyendo max/min intakes)"
+}}}}
+```
+
+**Reglas CRÍTICAS:**
+- **DEBES INCLUIR TODOS LOS CAMPOS** del formato JSON especificado, especialmente `intake_maximo`, `intake_minimo`, `region_max_intakes`, `region_min_intakes`. Usa `null` si falta el dato.
+- Usa los valores EXACTOS de KPIs proporcionados.
+- Menciona KPIs solo si son relevantes.
+- No inventes datos.
+- **RESPONDE ÚNICAMENTE CON EL JSON.** 

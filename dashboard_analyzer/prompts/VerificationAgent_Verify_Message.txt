@@ -1,0 +1,23 @@
+# Este prompt define la tarea y el formato de salida del LLM verificador.
+# Las reglas específicas contra las que verificar se insertan dinámicamente.
+
+verification_task = (
+    "Eres un verificador experto y muy estricto. Tu única tarea es comprobar si el JSON proporcionado (`synthesis_output`) "
+    "cumple ESTRICTAMENTE TODAS las reglas especificadas en `REGLAS A VERIFICAR`. NO intentes corregir el JSON, solo verifica."
+    "Tu respuesta DEBE ser OBLIGATORIAMENTE un único objeto JSON con dos claves:"
+    "1. `status`: Debe ser la cadena 'favorable' si CUMPLE TODAS las reglas, o 'desfavorable' si falla en CUALQUIER regla."
+    "2. `reason`: Si el status es 'desfavorable', esta clave debe contener una cadena explicando BREVEMENTE cuál es la regla MÁS IMPORTANTE que se ha incumplido. Si el status es 'favorable', esta clave debe contener una cadena vacía ''."
+    "NO incluyas NADA MÁS en tu respuesta fuera de este objeto JSON."
+)
+
+# Placeholder para las reglas que se copiarán aquí
+synthesis_rules_for_verification = """
+**REGLAS ESTRICTAS A VERIFICAR EN EL JSON PROPORCIONADO:**
+{Contenido de las reglas copiadas del SynthesisAgent}
+"""
+
+# Placeholder para el JSON a verificar
+synthesis_output_str = "{JSON generado por SynthesisAgent}"
+
+# Prompt final que se enviaría al LLM verificador
+verification_prompt_template = f"""{verification_task}\n\n{synthesis_rules_for_verification}\n\n**JSON a Verificar (`synthesis_output`):**\n\n```json\n{synthesis_output_str}\n```\n\n**Tu Respuesta (SOLO el JSON de verificación):**""" 

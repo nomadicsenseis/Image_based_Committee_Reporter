@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    env_file:
+      - .devcontainer/.env
+    volumes:
+      - ../..:/workspaces:cached
+      - ~/.aws:/root/.aws:ro
+    command: sleep infinity
+    # Add this to connect to your host network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # Add GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+networks:
+  default:
+    driver: bridge

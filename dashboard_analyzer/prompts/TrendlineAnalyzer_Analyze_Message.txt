@@ -1,0 +1,32 @@
+Analiza los gráficos de tendencias y proporciona un análisis detallado. 
+
+IMPORTANTE: 
+- NO inventes NINGÚN dato, fecha o cifra. Si algún dato no es legible o no está disponible, indícalo claramente pero NUNCA lo sustituyas con valores inventados.
+- IMPORTANTE: Enfócate SOLAMENTE en los radios de IB (Iberia). Debes analizar los datos de IB para cada radio por separado (a menos que sea dashboard 'commercial').
+- Devuelve SOLO el JSON puro sin bloques de código o comentarios
+- Los valores deben ser numéricos cuando sea posible
+- Las fechas deben estar en formato YYYY-MM-DD
+- Omite recomendaciones o juicios de valor, solo analiza los datos.
+
+El JSON debe seguir esta estructura:
+{
+  "dashboard_name": <string>,  // Tipo de dashboard
+  "direction": <string>,         // inbound o outbound
+  "trends": {
+    "tabla": [
+      {
+        "airline_haul": <string>,
+        "values": [valor1, valor2, ...],
+        "dates": ["YYYY-MM-DD", "YYYY-MM-DD", ...],
+        "maximo": { "valor": number, "fecha": "YYYY-MM-DD" }, // Añadido max/min
+        "minimo": { "valor": number, "fecha": "YYYY-MM-DD" }  // Añadido max/min
+      }
+      // ... más entradas de tabla si hay más radios/aerolíneas relevantes ...
+    ],
+    "overall_analysis": "Análisis general de las tendencias incluyendo picos y caidas, etc para cada radio por separado"
+  }
+}
+
+{Umbrales de tendencias si se proporcionan}
+
+{Placeholder para la IMAGEN DE TENDENCIA} 

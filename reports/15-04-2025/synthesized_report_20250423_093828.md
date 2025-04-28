@@ -1,0 +1,14 @@
+# Airline Performance Report - 15-04-2025
+
+## Weekly Report
+
+- **Operations**: Los valores de puntualidad en salidas oscilaron entre el 70% y 93% para IB LH, y entre 87% y 99% para IB SMH inbound. Para puntualidad en llegadas, IB SMH osciló entre 85% y 95%. Los factores de carga se mantuvieron estables en torno al 90%.
+
+- **Customer**: El NPS inbound reportó un máximo de 71 en la región 'AFRICA CENTRO' y un mínimo de 8 en 'AMERICA SUR', mientras que el NPS outbound alcanzó 55 en 'PAISES NO CEE' y 22 en 'AMERICA SUR'. Las tendencias inbound y outbound mostraron patrones fluctuantes. No se registraron datos outbound para 'ORIENTE MEDIO'.
+
+- **Disruptions**: Se reportaron 12 cancelaciones, mayormente operativas (9), y 351 retrasos en llegadas superiores a 15 minutos, lo cual representa un aumento significativo frente a la semana anterior. El porcentaje de misshandling creció 1.14 puntos hasta 13.92%. Las cancelaciones inbound se concentraron en Europa CEE, mientras que outbound la mayoría de regiones registraron 0 cancelaciones.
+
+- **Commercial**: Los intakes mostraron una caída relevante de 8.7 puntos (-7.07%) en last_week comparado con last_reported, aunque excedieron el target semanal en 2.6 puntos. El número de pasajeros disminuyó significativamente en 38.9 (-7.42%) durante last_week. La evolución de intakes en last_week reveló una tendencia a la baja para IB SMH y fluctuante para IB LH.
+
+- **Interpretación General**: Según los datos analizados, se observa una disminución significativa en intakes y pasajeros durante la última semana en comparación con el período anterior, lo que podría indicar una caída en la demanda. Sin embargo, esta disminución no parece estar totalmente alineada con el aumento en el target semanal comercial, sugiriendo una posible desconexión entre las expectativas y la realidad operativa. Por otro lado, la caída del 17.87% en el NPS durante la última semana puede estar parcialmente relacionada con los problemas operativos como el aumento significativo en cancelaciones, retrasos y mal manejo de equipaje reportados. No obstante, la magnitud de esta disminución en el NPS no parece totalmente explicada por las disrupciones recientes, considerando el decalaje de 4 días. Es posible que otros factores, como la gestión de la experiencia del cliente, también hayan contribuido al deterioro en la satisfacción de los pasajeros. Las tendencias fluctuantes en el NPS tanto inbound como outbound, con picos notables de hasta 71 en África Centro y 55 en Países no CEE, sugieren la necesidad de un enfoque más sólido y consistente en la prestación del servicio. En términos operativos, a pesar de los niveles de puntualidad generalmente aceptables, se registraron disrupciones significativas, especialmente en la región de Europa CEE, con el mayor número de cancelaciones tanto inbound como outbound. Esta circunstancia puede haber contribuido a la caída del NPS en dicha región.
+

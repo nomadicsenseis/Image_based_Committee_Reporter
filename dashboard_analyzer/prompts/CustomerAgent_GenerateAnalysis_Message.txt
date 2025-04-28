@@ -1,0 +1,58 @@
+Analiza los siguientes datos del dashboard de Customer y proporciona un análisis estructurado.
+
+**ANÁLISIS DETALLADOS DE ENTRADA:**
+### Datos de KPIs
+{raw_data_kpis}
+
+### Datos de Tendencias
+{raw_data_trends}
+
+### Datos de Mapas
+{raw_data_maps}
+
+### Umbrales definidos para evaluar los datos:
+{thresholds}
+
+**TAREA:**
+1. Evalúa todos los KPIs relevantes contra umbrales.
+2. **Tendencias:** Describe patrones clave y **OBLIGATORIAMENTE incluye los valores `nps_maximo` y `nps_minimo`** para cada segmento (in/out) si los datos de entrada (`trend_data`) los contienen.
+3. **Mapas:** Describe patrones clave y **OBLIGATORIAMENTE incluye `region_maxima_nps`, `nps_maximo`, `region_minima_nps`, `nps_minimo`** para cada segmento (in/out) si los datos de entrada (`map_data`) los contienen.
+4. **Overall:** Resume hallazgos clave, incluyendo los **máximos y mínimos de NPS MÁS SIGNIFICATIVOS** de tendencias y mapas.
+5. Genera un análisis estructurado siguiendo **ESTRICTAMENTE** el formato JSON de salida especificado.
+
+**Formato JSON de Salida Requerido (¡SEGUIR ESTRICTAMENTE! INCLUIR *TODOS* LOS CAMPOS):**
+```json
+{{
+  "kpi_analysis": {{
+    "nps": {{ "value": number, "analysis": "string" }},  
+    "nps_vs_nps_prev_week": {{ "nps_value": number, "prev_week_nps_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "nps_vs_target": {{ "nps_value": number, "target": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "ratio_ib_plus": {{ "value": number, "analysis": "string" }},
+    "ratio_ib_plus_prev_week": {{ "ratio_ib_plus_value": number, "prev_week_ratio_ib_plus_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "ratio_bus_leisure": {{ "value": number, "analysis": "string" }},
+    "ratio_bus_leisure_prev_week": {{ "ratio_bus_leisure_value": number, "prev_week_ratio_bus_leisure_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }},
+    "conex_flight_percentage": {{ "value": number, "analysis": "string" }},
+    "conex_flight_percentage_prev_week": {{ "conex_flight_percentage_value": number, "prev_week_conex_flight_percentage_value": number, "difference": number, "percentage_change": number | null, "is_relevant": boolean, "analysis": "string" }}
+  }},
+  "trend_analysis": {{
+    "inbound": {{
+      "NPS_evolution": {{ "overall_analysis": "string", "nps_maximo": number | null, "nps_minimo": number | null }}
+    }},
+    "outbound": {{
+      "NPS_evolution": {{ "overall_analysis": "string", "nps_maximo": number | null, "nps_minimo": number | null }}
+    }}
+  }},
+  "map_analysis": {{
+    "inbound": {{ "analysis": "string", "region_maxima_nps": string | null, "nps_maximo": number | null, "region_minima_nps": string | null, "nps_minimo": number | null }},
+    "outbound": {{ "analysis": "string", "region_maxima_nps": string | null, "nps_maximo": number | null, "region_minima_nps": string | null, "nps_minimo": number | null }}
+  }},
+  "overall_analysis": "string (incluyendo resumen de max/min NPS)"
+}}
+```
+
+**Reglas CRÍTICAS:**
+- **DEBES INCLUIR TODOS LOS CAMPOS** del formato JSON especificado, especialmente los de max/min NPS y regiones. Usa `null` si falta el dato.
+- Menciona KPIs solo si son relevantes.
+- Usa diferencia absoluta para NPS vs Target, no % diff para vs PW.
+- No inventes datos.
+- **RESPONDE ÚNICAMENTE CON EL JSON.** 

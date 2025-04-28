@@ -1,0 +1,69 @@
+## ANÁLISIS COMPARATIVO DE DATOS COMERCIALES
+
+### Periodo de Análisis: Last Reported vs Last Week
+
+#### Análisis del Último Periodo Reportado (Last Reported):
+{last_reported_insights}
+
+#### Análisis de la Última Semana (Last Week):
+{last_week_insights}
+
+## Datos de KPIs para Comparación:
+
+### Last Reported:
+```json
+{json_last_reported_kpis}
+```
+
+### Last Week:
+```json
+{json_last_week_kpis}
+```
+
+### Comparación Pre-calculada (KPIs):
+```json
+{json_comparison_data}
+```
+
+### Datos Específicos de Tendencia (Haul - Last Week):
+```json
+{json_specific_trend_data_lw_haul}
+```
+
+## INSTRUCCIONES:
+IMPORTANTE: Debes analizar y comparar los datos de AMBOS periodos. 
+Los KPIs y sus valores están disponibles directamente en este prompt.
+
+VALORES CONCRETOS DE KPIs LAST_REPORTED:
+{json_last_reported_kpis_again}
+
+VALORES CONCRETOS DE KPIs LAST_WEEK:
+{json_last_week_kpis_again}
+
+---
+**Contexto Temporal y Prioridad de Análisis:**
+-   **`last_reported`:** Refleja los datos más recientes presentados al comité (datos hasta miércoles para reunión del jueves). **Usa estos datos principalmente para evaluar el rendimiento actual frente a `target`** (`weekly_target`, `official_target`).
+-   **`last_week`:** Son los 7 días previos.
+-   **Evolución Semanal:** Para analizar la **evolución** o cambios entre las dos semanas (ej. en intakes, passengers, yield), utiliza la comparación entre `last_reported` y `last_week`, apoyándote en la sección `Comparación Pre-calculada`.
+---
+
+Tu tarea es analizar los datos de los KPIs y tendencias de los periodos "last_reported" y "last_week", e identificar:
+1.  Diferencias significativas entre ambos periodos (usa `Comparación Pre-calculada`).
+2.  **Tendencias:** Basa tu análisis comparativo de tendencias (`trend_comparison`) **principalmente en la evolución por haul de la última semana (`evolution_intake_by_salesdatehaul_last_week`)** cuyos datos específicos se proporcionan arriba. Compara esta evolución con la situación general.
+3.  Anomalías específicas.
+4.  El rendimiento actual (`last_reported`) frente a los targets.
+
+ESTRUCTURA DE RESPUESTA REQUERIDA (formato JSON):
+```json
+{{
+  "kpi_comparison": {{ ... (estructura kpi_comparison completa) ... }},
+  "trend_comparison": {{ "analysis": "análisis comparativo de tendencias, **enfocado en la evolución por haul de last_week**" }},
+  "map_comparison": {{ "analysis": "análisis comparativo de mapas" }},
+  "overall_analysis": "análisis general de las comparaciones, incluyendo rendimiento vs target (basado en last_reported) y evolución semanal (enfocada en haul)"
+}}
+```
+
+CRÍTICO: Debes utilizar EXACTAMENTE los valores numéricos de KPIs que ves arriba. NO inventes valores diferentes ni indiques que no hay datos si tienes los valores numéricos. 
+
+ASEGÚRATE de que tu JSON sea válido. Utiliza los valores exactos que se muestran arriba para last_reported_value, last_week_value, difference, percentage_change, etc. 
+NO omitas ningún periodo o valor con la excusa de falta de datos, ya que los datos están claramente proporcionados en este prompt. 

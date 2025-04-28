@@ -1,0 +1,14 @@
+# Airline Performance Report - 22-04-2025
+
+## Weekly Report
+
+- **Operations**: La puntualidad en salidas (92%) ha aumentado +2 puntos respecto a la semana anterior, mientras que los pasajeros (343,104) han disminuido -6,172. Las tendencias de puntualidad para inbound muestran una caída hasta 71% el 16 de abril en IB LH con posterior recuperación, mientras que IB SMH mantiene valores superiores al 90% excepto el 9 de abril (87%); para outbound, IB LH fluctuó entre 77% y 97%, mientras IB SMH osciló entre 80% y 98%. Los mapas indican mayor puntualidad inbound en África Centro y Países no CEE, mientras que outbound alcanza 100% en África Centro, Oriente Medio y Extremo Oriente.
+
+- **Customer**: El NPS (32.5) ha aumentado +2.6 respecto a la semana anterior, mientras que el ratio de pasajeros IB Plus (23.8) ha disminuido -4.1, el ratio business/leisure (7.7) ha caído drásticamente -13.1, y el porcentaje de vuelos de conexión (15.1) ha aumentado +0.8. Las tendencias muestran para inbound valores NPS más altos en IB SMH (30-58) que en IB LH (-19-21), y para outbound una tendencia ascendente hasta el 15 de abril con posterior descenso en ambos radios. Los mapas revelan valores NPS más altos en España y Europa cercana para inbound, mientras que outbound presenta máximos (100) en África Centro y Oriente Medio.
+
+- **Disruptions**: Las cancelaciones (2) han disminuido significativamente -9 respecto a la semana anterior. Las tendencias muestran para inbound picos de 2 cancelaciones en IB LH los días 10-11 de abril y en IB SMH el 9 de abril; para outbound, se observa un pico de 2 cancelaciones en IB LH el 10 de abril. Los mapas indican un máximo de 1 cancelación inbound en América Sur y España, mientras todas las regiones registraron 0 cancelaciones outbound.
+
+- **Commercial**: Las intakes (106.6) han disminuido -10.2 respecto a la semana anterior y están -11.2 por debajo del target, mientras que los pasajeros (466,400) han caído -24,700 respecto a la semana previa. Las tendencias muestran una evolución decreciente para intakes en todos los radios, con picos puntuales el 8 y 10 de abril para IB NAM e IB LH respectivamente. Los mapas indican que la región PA registra el valor máximo (52,324,747) mientras DZ presenta el mínimo (2,133,117).
+
+- **Interpretación General**: El rendimiento general muestra contrastes significativos: mientras la operativa mejora con incremento en puntualidad y reducción drástica de cancelaciones, los indicadores comerciales presentan un deterioro con caída en intakes y pasajeros. Destaca la caída alarmante del ratio business/leisure (-63%) que requiere atención inmediata. Sorprendentemente, a pesar de los picos de cancelaciones en IB LH los días 10-11 de abril, el NPS para este radio aumentó significativamente del 13 al 15 de abril, alcanzando un máximo de 45, lo que sugiere que otros factores están influyendo positivamente en la percepción del cliente.
+
